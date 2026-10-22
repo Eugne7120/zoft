@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #070709;
+    color: #f4f4f6;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans-ui {
+  font-family: var(--font-sans);
+}
+
+.font-mono-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.bg-dot-matrix {
+  background-color: #0a0b0e;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  background: #ffffff;
+  border: 2px solid #070709;
+  margin-top: -4.5px;
+  box-shadow: 0 1px 6px rgba(255, 255, 255, 0.35);
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.18);
+}
+
+input[type="range"]:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+@keyframes zoft-orb-float {
+  0%, 100% {
+    transform: translate3d(0, 0px, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0) scale(1.02);
+  }
+}
+
+@keyframes zoft-orb-pulse-glow {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.12);
+  }
+}
+
+@keyframes zoft-ring-spin {
+  0% {
+    transform: rotateX(68deg) rotateY(-16deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(68deg) rotateY(-16deg) rotateZ(360deg);
+  }
+}
+
+@keyframes zoft-ring-spin-reverse {
+  0% {
+    transform: rotateX(-58deg) rotateY(22deg) rotateZ(360deg);
+  }
+  100% {
+    transform: rotateX(-58deg) rotateY(22deg) rotateZ(0deg);
+  }
+}
+
+.zoft-orb-float {
+  animation: zoft-orb-float 5.2s ease-in-out infinite;
+}
+
+.zoft-orb-glow {
+  animation: zoft-orb-pulse-glow 3.6s ease-in-out infinite;
+}
+
+.zoft-orb-ring-1 {
+  animation: zoft-ring-spin 14s linear infinite;
+}
+
+.zoft-orb-ring-2 {
+  animation: zoft-ring-spin-reverse 18s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zoft-orb-float,
+  .zoft-orb-glow,
+  .zoft-orb-ring-1,
+  .zoft-orb-ring-2 {
+    animation: none !important;
+  }
+}
+

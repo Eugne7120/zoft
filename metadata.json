@@ -1,0 +1,6 @@
+{
+  "name": "zOFT Protocol ($ZOFT) — Omnichain ZK Join-Split & LayerZero V2 Privacy",
+  "description": "Client-Side ZK Join-Split Notes meets LayerZero V2 lzRead and ERC-5564 Stealth Architecture for Untraceable, Multi-Chain Capital Mobility.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
